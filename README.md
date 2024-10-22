@@ -4,11 +4,13 @@
 
 # ENTITIE USER
 
-[] - Deve ser possível criar um usuário
-[] - Deve ser possível buscar um usuário por id
-[] - Deve ser possível autenticar um usuário
-[] - Pode existir três tipos de usuários [admin,varegista,lider]
-[] - Deve ser possível um softDelete 
+[x] - Deve ser possível criar um usuário
+[x] - Deve ser possível buscar um usuário por id
+[x] - Deve ser possível autenticar um usuário
+[x] - Pode existir três tipos de usuários [admin,varegista,lider]
+[x] - Deve ser possível um softDelete 
+[x] - Deve ser possível cadastrar apenas um usuário por email
+[x] - Deve ser possível atualizar um usuário
 
 # ENTITIE RETAIL
 
