@@ -12,6 +12,7 @@ export class AuthService {
   ) {}
 
   async signIn(signInDto: SignInDto): Promise<string | {}> {
+    
     const user = await this.usersService.findByEmail(signInDto.email);
 
     if (!user) {
