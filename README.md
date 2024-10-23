@@ -25,6 +25,6 @@
 
 [] - Somente admin e líder podem cadastrar produto
 [] - Os produtos não podem ficar com quantidade negativa
-[] - Quando produto chegar à 5, deve enviar um email para o lider informando
+[] - Quando produto chegar à 5, deve enviar um email para o lider 
 [] - Produtos em estoque podem ter no máximo 100 quantidades
 [] - Quando produto chegar a 0, deve desativar o produto
