@@ -46,8 +46,7 @@ export class UsersService {
 
   async findByEmail(email: string) {
     try {
-      const user = await this.usersRepository.findOne({ where: {email} });
-
+      const user = await this.usersRepository.findOne({ where: { email } });
 
       return user || null;
     } catch (error) {
@@ -166,15 +165,13 @@ export class UsersService {
 
   async delete(id: string) {
     try {
-
       const user = await this.findOne(id);
 
-      if(!user) {
-        throw new HttpException('User not found', 404)
+      if (!user) {
+        throw new HttpException('User not found', 404);
       }
 
-      await this.usersRepository.delete(id)
-      
+      await this.usersRepository.delete(id);
     } catch (error) {
       throw new HttpException(
         error.message || 'Internal server error.',
