@@ -162,4 +162,23 @@ export class UsersService {
       );
     }
   }
+
+  async delete(id: string) {
+    try {
+
+      const user = await this.findOne(id);
+
+      if(!user) {
+        throw new HttpException('User not found', 404)
+      }
+
+      await this.usersRepository.delete(id)
+      
+    } catch (error) {
+      throw new HttpException(
+        error.message || 'Internal server error.',
+        error.status || 500,
+      );
+    }
+  }
 }

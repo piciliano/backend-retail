@@ -1,5 +1,5 @@
-import { UserRole } from "src/enum/role-enum";
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { UserRole } from "src/enums/role-enum";
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('users')
 export class User {
@@ -19,7 +19,7 @@ export class User {
     @Column()
     email: string
 
-    @Column({type: 'enum', nullable: false, default: UserRole.Retail, enum: UserRole})
+    @Column({type: 'enum', nullable: false, default: UserRole.Functionary, enum: UserRole})
     role: UserRole
 
     @Column({ type: 'boolean', default: true })
@@ -28,6 +28,6 @@ export class User {
     @CreateDateColumn()
     created_at: Date
 
-    @CreateDateColumn()
+    @UpdateDateColumn()
     update_at: Date
 }
